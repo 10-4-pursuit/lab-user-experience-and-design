@@ -21,7 +21,7 @@
 }
 
 html {
-  background: var(--primary-background);
+  background: var(--old-midnight);
   font-family: Helvetica, sans-serif;
   color: var(--primary-color);
 }
@@ -50,12 +50,18 @@ nav h1 {
 /* Main section */
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
   padding: 30px;
 }
 
 /* Form */
+input#name{
+  color: black;
+
+}
+
 aside.form {
   padding: 0 30px;
 }
@@ -165,7 +171,7 @@ aside.form form button[type="submit"]:hover {
   margin: 5px 0;
 }
 
-.guest-list button {
+/* .guest-list button {
   background: var(--danger);
   border: 0;
   border-radius: 5px;
@@ -175,7 +181,7 @@ aside.form form button[type="submit"]:hover {
   margin-top: 10px;
   padding: 10px 20px;
   cursor: not-allowed;
-}
+} */
 
 .guest-list .stock {
   background: var(--primary-gray);
