@@ -66,37 +66,36 @@ aside.form h2 {
 
 aside.form form label {
   display: block;
-  margin: 20px 0;
-  width: 100%;
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--primary-highlight);
 }
 
 aside.form form input,
 aside.form form select {
-  border: 2px solid #ccc;
-  border-radius: 0;
-  border-style: solid;
+  border: 2px solid var(--primary-highlight);
+  border-radius: 5px;
   box-sizing: border-box;
-  color: ghostwhite;
   display: block;
   margin: 5px 0;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
-  color: aliceblue;
+  color: var(--dark-color);
 }
 
 aside.form form button,
 button {
-  background: var(--primary-highlight);
+  background: var(--secondary-highlight);
   border: 0;
   border-radius: 5px;
-  border-style: solid;
   font-weight: bold;
-  padding: 10px 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 aside.form form button:hover {
-  background: var(--secondary-highlight);
-  cursor: no-drop;
+  background: var(--gold-soundz);
 }
 
 aside.form form button[type="submit"] {
@@ -161,20 +160,20 @@ aside.form form button[type="submit"]:hover {
 }
 
 .guest-list p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 5px 0;
+  color: var(--primary-color);
 }
 
 .guest-list button {
-  background: var(--danger);
-  border: 0;
-  border-radius: 5px;
-  border-style: solid;
-  color: #fbfbff;
-  font-weight: bold;
-  margin-top: 10px;
-  padding: 10px 20px;
-  cursor: not-allowed;
+  background: var(--electric-mint);
+  color: var(--dark-color);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.guest-list button:hover {
+  background: var(--blueberry-smoothie);
 }
 
 .guest-list .stock {
@@ -194,11 +193,38 @@ aside.form form button[type="submit"]:hover {
 }
 
 .out-vip {
+  background: var(--vip-background-color);
+  color: var(--vip-text-color);
+  border: 2px solid var(--vip-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.out-vip:hover {
+  background: var(--vip-hover-background-color);
+  color: var(--vip-hover-text-color);
+  border-color: var(--vip-hover-border-color);
 }
 
 .in-vip {
   background-color: var(--primary-highlight);
+  color: var(--in-vip-text-color);
+  border: 2px solid var(--in-vip-border-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
+
+.in-vip:hover {
+  background-color: var(--in-vip-hover-background-color);
+  color: var(--in-vip-hover-text-color);
+  border-color: var(--in-vip-hover-border-color);
+}
+
 
 .bounce {
   color: var(--secondary-highlight);
