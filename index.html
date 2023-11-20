@@ -20,58 +20,46 @@
     </nav>
     <main class="wrapper">
       <aside class="form">
-  
         <form id="form">
-          <label>
-
-            <input type="text" name="name" id="name" />
-          </label>
-          <label>
-
-            <select name="isVip" id="isVip">
-              <option value=""></option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" />
+  
+          <label for="isVip">VIP Status:</label>
+          <select name="isVip" id="isVip">
+            <option value=""></option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+  
           <div id="error"></div>
           <button type="submit" id="submit">Submit</button>
           <button type="button" id="clear">Reset</button>
-
         </form>
       </aside>
       <section class="guest-list">
         <article class="guest">
-          <img
-          src="https://i.pravatar.cc/150?img=49"
-          alt="Person 1"
-        />
+          <img src="https://i.pravatar.cc/150?img=49" alt="Person 1" />
           <div>
-            <h2><span>   </span>Person 1</h2>
+            <h2><span>🌟</span>Person 1</h2>
+            <p>Currently on the VIP list</p>
             <div class="status">
               <button class="in-vip vip">Make VIP</button>
-            <button type="button" class="bounce">Bounce</button>
+              <button type="button" class="bounce">Bounce</button>
+            </div>
           </div>
         </article>
         <article class="guest">
-          <img
-          src="https://i.pravatar.cc/150?img=33"
-          alt="Person 2"
-        />
+          <img src="https://i.pravatar.cc/150?img=33" alt="Person 2" />
           <div>
             <h2><span>⭐️</span>Person 2</h2>
+            <p>Not on the VIP list</p>
             <div class="status">
-              <button class="out-vip vip">
-                Remove VIP
-              </button>
-            <button type="button" class="bounce">Bounce</button>
-          </div>
+              <button class="out-vip vip">Add to VIP</button>
+              <button type="button" class="bounce">Bounce</button>
+            </div>
           </div>
         </article>
-
       </section>
-
-
     </main>
   </body>
 </html>
