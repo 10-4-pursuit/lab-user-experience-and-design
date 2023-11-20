@@ -7,6 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🤩</text></svg>">
     <title>VIP Guest List Application</title>
     <link rel="stylesheet" href="./styles/index.css" />
+    <!-- JS scripts for app functionality -->
     <script defer src="./scripts/bounce.js"></script>
     <script defer src="./scripts/vip-change.js"></script>
     <script defer src="./scripts/create.js"></script>
@@ -15,21 +16,23 @@
     <script defer src="./scripts/run.js"></script>
   </head>
   <body>
+    <!-- Navigation bar with app logo -->
     <nav>
       <h1 class="logo">VIP Guest List</h1>
     </nav>
     <main class="wrapper">
+      <!-- Form section for entering guests -->
       <aside class="form">
   
         <form id="form">
           <label>
 
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" placeholder="Enter Full Name" />
           </label>
           <label>
-
-            <select name="isVip" id="isVip">
-              <option value=""></option>
+<!-- dropdown for VIP status -->
+            <select name="isVip" id="isVip" required>
+              <option value="" disabled selected>Is this person a VIP</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
@@ -40,6 +43,7 @@
 
         </form>
       </aside>
+      <!-- Guest list section -->
       <section class="guest-list">
         <article class="guest">
           <img
