@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -31,15 +33,11 @@ button {
 }
 
 /* Header */
-nav {
+header {
   background: var(--secondary-background);
   border-bottom: 3px solid var(--primary-highlight);
-  padding: 50px;
+  padding: 20px;
   text-align: center;
-}
-
-nav h1 {
-  font-size: 50px;
 }
 
 .logo {
@@ -56,56 +54,49 @@ nav h1 {
 }
 
 /* Form */
-aside.form {
+.form {
   padding: 0 30px;
 }
 
-aside.form h2 {
-  text-align: right;
+.form h2 {
+  text-align: center;
+  border-bottom: 3px solid var(--primary-highlight);
+  color: var(--secondary-highlight);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
-aside.form form label {
+.form label {
   display: block;
   margin: 20px 0;
-  width: 100%;
 }
 
-aside.form form input,
-aside.form form select {
+.form input,
+.form select {
   border: 2px solid #ccc;
-  border-radius: 0;
-  border-style: solid;
-  box-sizing: border-box;
+  border-radius: 5px;
   color: ghostwhite;
   display: block;
   margin: 5px 0;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
-  color: aliceblue;
 }
 
-aside.form form button,
-button {
+.form button {
   background: var(--primary-highlight);
   border: 0;
   border-radius: 5px;
-  border-style: solid;
+  color: white;
   font-weight: bold;
-  padding: 10px 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-aside.form form button:hover {
+.form button:hover {
   background: var(--secondary-highlight);
-  cursor: no-drop;
-}
-
-aside.form form button[type="submit"] {
-  background: var(--primary-gray);
-}
-
-aside.form form button[type="submit"]:hover {
-  background: var(--primary-gray);
-  cursor: wait;
 }
 
 /* Errors */
@@ -114,12 +105,17 @@ aside.form form button[type="submit"]:hover {
   padding: 15px 0;
   background: var(--primary-gray);
   border-radius: 5px;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 #error li {
   color: var(--primary-color);
   margin: 5px 0;
+}
+
+/* Guest List */
+.guest-list {
+  color: var(--danger);
 }
 
 .guest-list article {
@@ -128,23 +124,16 @@ aside.form form button[type="submit"]:hover {
   margin-bottom: 30px;
 }
 
-.guest-list article aside {
-  padding: 0 30px;
-  text-align: right;
-}
-
-.guest-list article img {
+.guest-list img {
   border: 3px solid var(--secondary-background);
   height: 100px;
   width: 100px;
-  border-radius: 100%;
+  border-radius: 50%;
   margin-right: 20px;
   cursor: pointer;
 }
 
-.guest-list h2,
-.form h2 {
-  border-bottom: 3px solid var(--primary-highlight);
+.guest-list h2 {
   color: var(--secondary-highlight);
   font-size: 24px;
   font-weight: 300;
@@ -152,69 +141,15 @@ aside.form form button[type="submit"]:hover {
   padding-bottom: 5px;
 }
 
-.guest-list h3 {
-  color: var(--primary-background);
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 100;
-  margin-bottom: 20px;
-}
-
-.guest-list p {
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.guest-list button {
-  background: var(--danger);
-  border: 0;
-  border-radius: 5px;
-  border-style: solid;
-  color: #fbfbff;
-  font-weight: bold;
-  margin-top: 10px;
-  padding: 10px 20px;
-  cursor: not-allowed;
-}
-
-.guest-list .stock {
-  background: var(--primary-gray);
-  border-radius: 5px;
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.status {
+.guest-list .status {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.out-vip {
-}
-
-.in-vip {
-  background-color: var(--primary-highlight);
-}
-
-.bounce {
-  color: var(--secondary-highlight);
-}
-.guest-list {
-  color: var(--danger);
-}
-
-/* Responsive */
-@media (max-width: 950px) {
-  .wrapper {
-    display: block;
-    width: 80%;
-  }
-
-  .wrapper aside.form {
-    margin: 50px auto;
-  }
+.guest-list button {
+  background: var(--danger);
+  border: 10;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
 }
