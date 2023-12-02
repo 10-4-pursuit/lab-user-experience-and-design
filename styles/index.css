@@ -3,31 +3,45 @@
 }
 
 :root {
-  --gold-soundz: #ffd166;
-  --neon-watermelon: #ef476f;
-  --electric-mint: #06d6a0;
-  --sage-sage: #83c5be;
-  --blueberry-smoothie: #118ab2;
-  --old-midnight: #073b4c;
-  --primary-background: var(--old-midnight);
-  --secondary-background: var(--electric-mint);
-  --primary-color: var(--sage-sage);
-  --secondary-color: var(--gold-soundz);
-  --dark-color: var(--old-midnight);
-  --primary-highlight: var(--gold-soundz);
-  --secondary-highlight: var(--neon-watermelon);
-  --primary-gray: #dfdfdf;
-  --danger: white;
+  --primary-color: #83c5be; /* Adjust the color values as needed */
+  --secondary-color: #ffd166;
+  --highlight-color: #ef476f;
+  --background-color: #073b4c;
+  --gray-color: #dfdfdf;
+  --danger-color: white;
 }
 
 html {
-  background: var(--primary-background);
+  background: var(--background-color);
   font-family: Helvetica, sans-serif;
   color: var(--primary-color);
 }
 
 button {
   cursor: pointer;
+  background: var(--secondary-color);
+  color: var(--primary-color); /* Add this line to set the text color */
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background: var(--highlight-color);
+  cursor: pointer;
+}
+
+* Responsive Styles */
+@media (max-width: 950px) {
+  .wrapper {
+    display: block;
+    width: 80%;
+  }
+
+  .wrapper aside.form {
+    margin: 50px auto;
+  }
 }
 
 /* Header */
@@ -107,6 +121,19 @@ aside.form form button[type="submit"]:hover {
   background: var(--primary-gray);
   cursor: wait;
 }
+
+/* Add or adjust the following styles in your existing CSS */
+
+/* Adjust the color to make the text visible */
+aside.form form select {
+  color: var(--primary-color); 
+}
+
+
+aside.form form select option {
+  color: var(--primary-color); 
+}
+
 
 /* Errors */
 #error {
@@ -198,6 +225,7 @@ aside.form form button[type="submit"]:hover {
 
 .in-vip {
   background-color: var(--primary-highlight);
+  
 }
 
 .bounce {
